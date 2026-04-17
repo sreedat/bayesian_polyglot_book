@@ -1,0 +1,41 @@
+---
+title: "index"
+author: "Sree Datta"
+date: "2026-04-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+--- 
+title: "Bayesian Analysis and Modeling: A Polyglot Guide"
+author: "Your Name"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: "A comprehensive guide to Bayesian statistics using R, Python, and Julia."
+---
+
+# Preface {-}
+
+Welcome to the open-source textbook on Bayesian modeling. This book is designed for students and researchers who want to see how the same statistical concepts are implemented across the three most popular languages in data science.
+
+```{r setup, include=FALSE}
+# This block tells the GitHub Robot where to find your languages
+library(reticulate)
+library(JuliaCall)
+
+if (Sys.getenv("GITHUB_ACTIONS") == "true") {
+  # Configure Python for the cloud
+  reticulate::use_python(Sys.which("python"))
+  
+  # Configure Julia for the cloud
+  julia_setup(installJulia = FALSE)
+}

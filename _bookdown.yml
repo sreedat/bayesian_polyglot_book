@@ -1,0 +1,6 @@
+book_filename: "bayesian-polyglot-textbook"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files: ["index.Rmd", "01-intro.Rmd", "02-setup.Rmd", "03-hypothesis.Rmd", "04-regression.Rmd", "05-hierarchical.Rmd", "06-evaluation.Rmd", "07-appendix.Rmd"]
